@@ -1,49 +1,28 @@
-import logo from "./logo.svg";
+import redHeart from "./redHeart.png";
+import blackHeart from "./blackHeart.png";
 import "./App.css";
-import {
-  BrowserView,
-  MobileView,
-  isBrowser,
-  isMobile,
-  isChrome,
-  isFirefox,
-  isIOS,
-} from "react-device-detect";
+import { isChrome, isFirefox, isIOS, isAndroid } from "react-device-detect";
 
 const App = () => {
   const renderTuesamArsh = () => {
     if (isIOS) {
-      return <p>on est Ios.</p>;
+      return <img src={blackHeart} className="App-logo" alt="logo" />;
+    }
+    if (isAndroid) {
+      return <img src={redHeart} className="App-logo" alt="logo" />;
     }
     if (isChrome) {
-      return <p>on est Chrome.</p>;
+      return <img src={blackHeart} className="App-logo" alt="logo" />;
     }
     if (isFirefox) {
-      return <p>on est Firefox.</p>;
+      return <img src={redHeart} className="App-logo" alt="logo" />;
     }
   };
   return (
     <div className="App">
       <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <BrowserView>
-          <h1>This is rendered only in browser</h1>
-        </BrowserView>
-        <MobileView>
-          <h1>This is rendered only on mobile</h1>
-        </MobileView>
+        <p>Look my Heart.</p>
         {renderTuesamArsh()}
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
       </header>
     </div>
   );

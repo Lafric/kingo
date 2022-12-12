@@ -11,12 +11,12 @@ const App = () => {
     if (isAndroid) {
       return <img src={redHeart} className="App-logo" alt="logo" />;
     }
-    if (isChrome) {
-      return <img src={blackHeart} className="App-logo" alt="logo" />;
-    }
-    if (isFirefox) {
-      return <img src={redHeart} className="App-logo" alt="logo" />;
-    }
+    // if (isChrome) {
+    //   return <img src={blackHeart} className="App-logo" alt="logo" />;
+    // }
+    // if (isFirefox) {
+    //   return <img src={redHeart} className="App-logo" alt="logo" />;
+    // }
   };
   return (
     <div className="App">
